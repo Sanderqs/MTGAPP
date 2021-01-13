@@ -1,5 +1,5 @@
 const initialState = {
-  cards: 1,
+  cards: 0,
 };
 
 export default function cardReducer(state = initialState, action) {
