@@ -1,18 +1,17 @@
 const initialState = {
   land: 17,
   nonland: 23,
-  // total: 40,
 };
 
 export default function landReducer(state = initialState, action) {
   switch (action.type) {
     case "DRAFT":
-      return { ...state, land: 17, nonland: 23, total: 40 };
+      return { ...state, land: 17, nonland: 23 };
 
     case "STANDARD":
-      return { ...state, land: 23, nonland: 37, total: 60 };
+      return { ...state, land: 23, nonland: 37 };
     case "EDH":
-      return { ...state, land: 44, nonland: 55, total: 99 };
+      return { ...state, land: 44, nonland: 55 };
     case "INPUT_CHANGE":
       const { type, numberOfCards } = action.payload;
       return { ...state, [type]: numberOfCards };
