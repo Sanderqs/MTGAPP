@@ -7,6 +7,8 @@ export default function cardReducer(state = initialState, action) {
     case "CHANGE_LAND":
       const { card, value } = action.payload;
       return { ...state, [card]: value };
+    case "SET_LAND":
+      return { ...state };
     default:
       return state;
   }
@@ -14,4 +16,7 @@ export default function cardReducer(state = initialState, action) {
 export const updateLand = (card, value) => {
   console.log(card);
   return { type: "CHANGE_LAND", payload: { card, value } };
+};
+export const setLand = (totalCards) => {
+  return { type: "SET_LAND", payload: totalCards };
 };
