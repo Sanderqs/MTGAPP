@@ -19,19 +19,26 @@ const SetCards = (props) => {
       </div>
 
       <div>
-        {Object.entries(cards).map(([card, type]) => (
-          <div>
-            {card}
-            <input
-              key={card}
-              type="number"
-              value={type}
-              onChange={(e) => {
-                dispatch(updateCard(card, e.target.value));
-              }}
-            />
-          </div>
-        ))}
+        <div>
+          land
+          <input
+            type="number"
+            value={cards.land}
+            onChange={(e) => {
+              dispatch(updateCard("land", Number(e.target.value)));
+            }}
+          />
+        </div>
+        <div>
+          nonland
+          <input
+            type="number"
+            value={cards.nonland}
+            onChange={(e) => {
+              dispatch(updateCard("nonland", Number(e.target.value)));
+            }}
+          />
+        </div>
       </div>
     </div>
   );
