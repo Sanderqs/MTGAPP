@@ -1,13 +1,11 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { setDraft, updateCard } from "../reducers/land";
-import { setStandard } from "../reducers/land";
-import { setEdh } from "../reducers/land";
-
+import { setDraft, updateCard, setStandard, setEdh } from "../reducers/land";
+//Toekomst vink toevoegen o je land te locken en funtie om onderlinge kaarten
+// altijd het totaal, de total cards zijn.
 const SetCards = (props) => {
   const cards = useSelector((state) => state.landReducer);
   const dispatch = useDispatch();
-  console.log(cards);
 
   return (
     <div>
@@ -19,19 +17,26 @@ const SetCards = (props) => {
       </div>
 
       <div>
-        {Object.entries(cards).map(([card, type]) => (
-          <div>
-            {card}
-            <input
-              key={card}
-              type="number"
-              value={type}
-              onChange={(e) => {
-                dispatch(updateCard(card, e.target.value));
-              }}
-            />
-          </div>
-        ))}
+        <div>
+          land
+          <input
+            type="number"
+            value={cards.land}
+            onChange={(e) => {
+              dispatch(updateCard("land", Number(e.target.value)));
+            }}
+          />
+        </div>
+        <div>
+          nonland
+          <input
+            type="number"
+            value={cards.nonland}
+            onChange={(e) => {
+              dispatch(updateCard("nonland", Number(e.target.value)));
+            }}
+          />
+        </div>
       </div>
     </div>
   );

@@ -1,9 +1,9 @@
 import { combineReducers } from "redux";
 
 import landReducer from "./land";
-import cardReducer from "./card";
+import counterReducer from "./counter";
 
 export default combineReducers({
   landReducer,
-  cardReducer,
+  counterReducer,
 });
