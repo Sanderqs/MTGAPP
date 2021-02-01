@@ -8,7 +8,7 @@ import { incrLife, decrLife, resetLife } from "../reducers/counter";
 const Counters = (props) => {
   const life = useSelector((state) => state.counterReducer);
   const dispatch = useDispatch();
-  console.log(life);
+
   return (
     <div>
       Slayer1

@@ -5,6 +5,7 @@ import TotalCards from "../component/TotalCards";
 const ManaCalculator = () => {
   return (
     <div>
+      keeskontvleees
       <SetCards />
       <TotalCards />
     </div>

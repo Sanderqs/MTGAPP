@@ -5,6 +5,7 @@ const LifeCounter = () => {
   return (
     <div>
       <Counters />
+      jojo
     </div>
   );
 };
