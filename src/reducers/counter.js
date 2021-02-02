@@ -24,6 +24,9 @@ export const incrLife = () => {
 export const decrLife = () => {
   return { type: "DECREMENT_LIFE" };
 };
+export const totalLife = () => {
+  return { type: "TOTAL_LIFE" };
+};
 export const resetLife = () => {
   return { type: "RESET_LIFE" };
 };
