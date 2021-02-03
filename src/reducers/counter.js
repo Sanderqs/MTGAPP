@@ -1,6 +1,6 @@
 const initialState = {
   PlayerOne: 20,
-  PlayerTwo: 20,
+  PlayerTwo: 18,
 };
 
 export default function counterReducer(state = initialState, action) {
