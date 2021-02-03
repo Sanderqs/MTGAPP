@@ -8,6 +8,7 @@ const Devotion = (props) => {
   console.log(devotion);
   return (
     <div>
+      <h1>Set Devotion</h1>
       <ul style={{ listStyleType: "none" }}>
         {Object.entries(devotion).map(([color, amount]) => (
           <li>
@@ -16,6 +17,7 @@ const Devotion = (props) => {
 
             <input
               type="number"
+              min="0"
               value={amount}
               onChange={(e) => dispatch(updateDevotion(color, e.target.value))}
             />

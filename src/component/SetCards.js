@@ -31,6 +31,7 @@ const SetCards = (props) => {
           nonland
           <input
             type="number"
+            min="0"
             value={cards.nonland}
             onChange={(e) => {
               dispatch(updateCard("nonland", Number(e.target.value)));

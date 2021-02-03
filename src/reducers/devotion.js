@@ -8,15 +8,15 @@ const initialState = {
 };
 export default function devotionReducer(state = initialState, action) {
   switch (action.type) {
-    case "INPUT_CHANGE":
-      const { type, numberOfCards } = action.payload;
-      console.log(type);
-      return { ...state, [type]: numberOfCards };
+    case "DEVOTION_CHANGE":
+      const { color, totalDevotion } = action.payload;
+      console.log(color, totalDevotion);
+      return { ...state, [color]: totalDevotion };
     default:
       return state;
   }
 }
 
-export const updateDevotion = (type, numberOfCards) => {
-  return { type: "INPUT_CHANGE", payload: { type, numberOfCards } };
+export const updateDevotion = (color, totalDevotion) => {
+  return { type: "DEVOTION_CHANGE", payload: { color, totalDevotion } };
 };
