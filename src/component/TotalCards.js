@@ -17,9 +17,6 @@ const TotalCards = () => {
             dispatch(updateTotal(Number(e.target.value)));
           }}
         />
-        <br />
-        Lock land
-        <input type="checkbox" />
       </div>
     </div>
   );

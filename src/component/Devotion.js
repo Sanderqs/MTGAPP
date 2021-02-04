@@ -17,9 +17,9 @@ const Devotion = (props) => {
 
             <input
               type="number"
-              min="0"
               value={amount}
               onChange={(e) => dispatch(updateDevotion(color, e.target.value))}
+              className={color}
             />
           </li>
         ))}

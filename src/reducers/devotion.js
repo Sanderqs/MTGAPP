@@ -4,7 +4,6 @@ const initialState = {
   green: 0,
   red: 0,
   white: 0,
-  colorless: 0,
 };
 export default function devotionReducer(state = initialState, action) {
   switch (action.type) {

@@ -12,6 +12,7 @@ const SetCards = (props) => {
       <h1>Set Mode</h1>
       <div>
         <button onClick={() => dispatch(setDraft())}>Draft</button>
+        <br></br>
         <button onClick={() => dispatch(setStandard())}>Standard</button>
         <button onClick={() => dispatch(setEdh())}>EDH</button>
       </div>
