@@ -1,12 +1,10 @@
 import React from "react";
 import Counters from "../component/Counters";
 
-const LifeCounter = () => {
+const LifeCounter = (props) => {
   return (
     <div>
       <Counters />
-      <Counters />
-      jojo
     </div>
   );
 };
