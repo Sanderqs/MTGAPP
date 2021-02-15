@@ -14,15 +14,12 @@ const Counters = (props) => {
       {Object.entries(life).map(([player, totalPlayerLife]) => (
         <li style={{ listStyleType: "none" }}>
           <strong>{player}</strong>
-          {/* <button onClick={() => dispatch(decrLife())}>-</button> */}
           <input
             type="number"
             value={totalPlayerLife}
             onChange={(e) => dispatch(updateTotalLife(player, e.target.value))}
             className={player}
           />
-          {/* <button onClick={() => dispatch(incrLife())}>+</button> */}
-          {/* <button onClick={() => dispatch(resetLife())}>Reset</button> */}
         </li>
       ))}
     </div>

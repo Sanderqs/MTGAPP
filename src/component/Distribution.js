@@ -6,12 +6,11 @@ const Distribution = (props) => {
   const devotion = useSelector((state) => state.devotionReducer);
   const total = useSelector((state) => state.landReducer);
   const totalLand = total.land;
-  console.log(devotion);
 
   const totalDevotion = Object.values(devotion).reduce(
     (a, b) => parseInt(a) + parseInt(b)
   );
-  console.log(totalDevotion);
+
   return (
     <div>
       <h1>Mana Distribution</h1>
