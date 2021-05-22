@@ -2,28 +2,25 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { updateDevotion } from "../reducers/devotion";
 
+//import stykes
+import { StyledH1, StyledInput, StyledSetMode } from "./SetCardsElements";
 const Devotion = (props) => {
   const devotion = useSelector((state) => state.devotionReducer);
   const dispatch = useDispatch();
 
   return (
     <div>
-      <h1>Set Devotion</h1>
-      <ul style={{ listStyleType: "none" }}>
+      <StyledH1>Set Devotion</StyledH1>
+      <StyledSetMode>
         {Object.entries(devotion).map(([color, amount]) => (
-          <li>
-            <hr />
-            <strong>{color}</strong>
-
-            <input
-              type="number"
-              value={amount}
-              onChange={(e) => dispatch(updateDevotion(color, e.target.value))}
-              className={color}
-            />
-          </li>
+          <StyledInput
+            type="number"
+            value={amount}
+            onChange={(e) => dispatch(updateDevotion(color, e.target.value))}
+            className={color}
+          />
         ))}
-      </ul>
+      </StyledSetMode>
     </div>
   );
 };

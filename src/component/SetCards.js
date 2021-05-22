@@ -1,6 +1,15 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { updateTotal } from "../reducers/land";
 import { setDraft, updateCard, setStandard, setEdh } from "../reducers/land";
+
+//styles
+import {
+  StyledSetMode,
+  StyledButton,
+  StyledH1,
+  StyledInput,
+} from "./SetCardsElements";
 //Toekomst vink toevoegen o je land te locken en funtie om onderlinge kaarten
 // altijd het totaal, de total cards zijn.
 const SetCards = (props) => {
@@ -9,18 +18,19 @@ const SetCards = (props) => {
 
   return (
     <div>
-      <h1>Set Mode</h1>
-      <div>
-        <button onClick={() => dispatch(setDraft())}>Draft</button>
-        <br></br>
-        <button onClick={() => dispatch(setStandard())}>Standard</button>
-        <button onClick={() => dispatch(setEdh())}>EDH</button>
-      </div>
+      <StyledH1>Set Mode</StyledH1>
+      <StyledSetMode>
+        <StyledButton onClick={() => dispatch(setDraft())}>Draft</StyledButton>
+        <StyledButton onClick={() => dispatch(setStandard())}>
+          Standard
+        </StyledButton>
+        <StyledButton onClick={() => dispatch(setEdh())}>EDH</StyledButton>
+      </StyledSetMode>
 
-      <div>
+      <StyledSetMode>
         <div>
-          land
-          <input
+          land{" "}
+          <StyledInput
             type="number"
             value={cards.land}
             onChange={(e) => {
@@ -29,8 +39,8 @@ const SetCards = (props) => {
           />
         </div>
         <div>
-          nonland
-          <input
+          nonland{" "}
+          <StyledInput
             type="number"
             min="0"
             value={cards.nonland}
@@ -39,11 +49,21 @@ const SetCards = (props) => {
             }}
           />
         </div>
-      </div>
+        <div>
+          <div>
+            total{" "}
+            <StyledInput
+              type="number"
+              value={cards.land + cards.nonland}
+              onChange={(e) => {
+                dispatch(updateTotal(Number(e.target.value)));
+              }}
+            />
+          </div>
+        </div>
+      </StyledSetMode>
     </div>
   );
 };
 
 export default SetCards;
-// onChange={(e) => {
-//             dispatch(updateDevotion(color, e.target.value));

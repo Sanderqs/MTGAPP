@@ -56,13 +56,12 @@ const Search = () => {
 
       {searchedCard && (
         <>
-          <br></br>
-          <button onClick={() => getRulings()}>Show rulings</button>
           <SearchedCard
             name={searchedCard.name}
             image={searchedCard.image_uris.normal}
             rules={rulingsCard}
           />
+          <button onClick={() => getRulings()}>Show rulings</button>
         </>
       )}
     </div>
