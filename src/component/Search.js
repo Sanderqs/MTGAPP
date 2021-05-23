@@ -21,6 +21,7 @@ const Search = () => {
     dispatch(fetchAllCards());
   }, [dispatch]);
 
+  //handlers
   const inputHandler = (e) => {
     setSearchInput(e.target.value);
   };
@@ -35,9 +36,6 @@ const Search = () => {
     dispatch(fetchRulings(searchedCard.id));
   };
 
-  const showRulingsCard = () => {
-    console.log(rulingsCard);
-  };
   return (
     <div>
       <input
@@ -59,7 +57,10 @@ const Search = () => {
           <SearchedCard
             name={searchedCard.name}
             image={searchedCard.image_uris.normal}
+            rulesImage={searchedCard.image_uris.art_crop}
+            price={searchedCard.prices.eur}
             rules={rulingsCard}
+            getRulings={getRulings}
           />
           <button onClick={() => getRulings()}>Show rulings</button>
         </>

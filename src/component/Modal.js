@@ -1,6 +1,12 @@
 import React from "react";
-import styled from "styled-components";
+import { useSelector, useDispatch } from "react-redux";
 
-export const Modal = () => {
-  return <div>Modal</div>;
+const Card = () => {
+  const rules = useSelector((state) => state.cardReducer.cardRulings);
+  const dispatch = useDispatch();
+
+  console.log(rules);
+  return <div></div>;
 };
+
+export default Card;
