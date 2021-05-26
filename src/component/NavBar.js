@@ -1,7 +1,16 @@
 import React from "react";
+//import dependencies
 import { Link } from "react-router-dom";
+
+//import styles
 import "./NavBar.css";
 
+//TODO:
+// 1.scalen voor mobile
+// 2. keuze menu voor randomize (coinflip of dobbelsteen)
+// 3. huidige pagina highlighten in menu
+// 4. "hamburger menu" bij mobile
+// 5. navbar.css naar styled components
 const NavBar = () => {
   return (
     <div className="nav-bar">

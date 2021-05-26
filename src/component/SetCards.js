@@ -1,5 +1,8 @@
 import React from "react";
+// import dependencies
 import { useSelector, useDispatch } from "react-redux";
+
+//import reduxstate
 import { updateTotal } from "../reducers/land";
 import { setDraft, updateCard, setStandard, setEdh } from "../reducers/land";
 

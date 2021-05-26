@@ -1,8 +1,14 @@
 import React, { useState } from "react";
+
+//import components
 import Modal from "./Modal";
 
 //styles
 import { StyledImg, StyledCard } from "./SearchElements";
+
+//TODO:
+// 1.
+// 2.
 
 const SearchedCard = ({
   image,

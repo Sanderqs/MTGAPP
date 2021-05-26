@@ -1,11 +1,20 @@
 import React, { useState, useEffect } from "react";
+
+//import dependencies
+import { useDispatch, useSelector } from "react-redux";
+//import reduxstate
 import {
   fetchAllCards,
   fetchSearch,
   fetchRulings,
 } from "../actions/searchActions";
-import { useDispatch, useSelector } from "react-redux";
+//import components
 import SearchedCard from "./SearchedCard";
+
+//TODO:
+// 1. searchinput opmaak
+// 2. React-Virtualized implementeren voor sneller zoek resultaat
+
 const Search = () => {
   //redux
   const dispatch = useDispatch();

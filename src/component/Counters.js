@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { updateTotalLife } from "../reducers/counter";
+import React, { useEffect, useState } from "react";
+// import { useSelector, useDispatch } from "react-redux";
+// import { updateTotalLife } from "../reducers/counter";
 import {
   StyledButtonWrapper,
   StyledLifeCounterContainer,
@@ -8,13 +8,30 @@ import {
   StyledPlusButton,
   StyledMinButton,
 } from "./CounterElements";
-//TODO text input naar number input zonder "inputarrows"
-//Toekomst, geschiedenis van lifeloss/gain in apart scherm
+//TODO :
+// 1. zorg dat ik twee maal de component kan bewaren in localStorage
+// 2. fix getal "Selecteren " tijdens klikken op -/+
+// 3. Layout liggend scherm
+// 4. toch redux gebruiken?
+//Toekomst:
+// geschiedenis van lifeloss/gain in apart scherm
+// Poison Counters toevoegen
 
 const Counters = (props) => {
-  const life = useSelector((state) => state.counterReducer);
-  const dispatch = useDispatch();
+  // const life = useSelector((state) => state.counterReducer);
+  // const dispatch = useDispatch();
   const [count, setCount] = useState(20);
+
+  useEffect(() => {
+    const data = localStorage.getItem("life-counter");
+    if (data) {
+      setCount(JSON.parse(data));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("life-counter", JSON.stringify(count));
+  });
   return (
     <StyledLifeCounterContainer>
       <StyledMinButton onClick={() => setCount(count - 1)}>-</StyledMinButton>
