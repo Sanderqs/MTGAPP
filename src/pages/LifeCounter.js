@@ -5,6 +5,7 @@ const LifeCounter = (props) => {
   return (
     <div>
       <Counters />
+      <Counters />
     </div>
   );
 };

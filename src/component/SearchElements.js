@@ -8,6 +8,7 @@ export const StyledImg = styled.img`
   justify-content: center;
   &:hover {
     cursor: pointer;
+  }
 `;
 export const StyledH1 = styled.h1`
   color: blue;
@@ -19,7 +20,8 @@ export const StyledCard = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  &::hover {
+  background: #eef5ee;
+  &:hover {
     cursor: pointer;
   }
 `;

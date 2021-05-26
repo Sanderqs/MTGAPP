@@ -1,4 +1,5 @@
 import React from "react";
+import Dice from "../component/Dice";
 // import * from '../assets'
 
 const Randomize = () => {
@@ -20,15 +21,10 @@ const Randomize = () => {
   }
 
   const rollDice6 = () => rollDice(1, 6);
-  const rollDice20 = () => rollDice(1, 20);
 
   return (
     <div>
-      <img
-        className="Dice"
-        src={require(`../assets/${"dice" + rollDice6()}.png`).default}
-        alt="kees"
-      />
+      <Dice />
     </div>
   );
 };

@@ -62,7 +62,7 @@ const Search = () => {
             rules={rulingsCard}
             getRulings={getRulings}
           />
-          <button onClick={() => getRulings()}>Show rulings</button>
+          {/* <button onClick={() => getRulings()}>Show rulings</button> */}
         </>
       )}
     </div>
