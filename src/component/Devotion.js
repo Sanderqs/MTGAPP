@@ -1,9 +1,16 @@
 import React from "react";
+//import dependencies
 import { useSelector, useDispatch } from "react-redux";
+
+//import Reducers
 import { updateDevotion } from "../reducers/devotion";
 
-//import stykes
+//import styles
 import { StyledH1, StyledInput, StyledSetMode } from "./SetCardsElements";
+
+//TODO:
+// 1. mooiere input
+
 const Devotion = (props) => {
   const devotion = useSelector((state) => state.devotionReducer);
   const dispatch = useDispatch();

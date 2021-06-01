@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 // import { useSelector, useDispatch } from "react-redux";
 // import { updateTotalLife } from "../reducers/counter";
+
+//Import Styles
 import {
   StyledButtonWrapper,
   StyledLifeCounterContainer,

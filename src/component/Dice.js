@@ -1,4 +1,6 @@
 import React from "react";
+
+//Styles
 import { StyledDiceImage, StyledRollingDice } from "./DiceElements";
 
 const Dice = () => {

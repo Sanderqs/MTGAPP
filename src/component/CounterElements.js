@@ -1,5 +1,9 @@
 import styled from "styled-components";
+
+//Import Icons
 import { FiPlusCircle, FiMinusCircle } from "react-icons/fi";
+
+
 export const StyledLifeCounterContainer = styled.div`
   display: flex;
   flex-direction: row;

@@ -1,5 +1,9 @@
 import React from "react";
 
+
+//TODO:
+// plaatje munt/kop toevoegen
+//
 const CoinFlip = () => {
   const flipCoin = (min, max) => {
     return min + Math.floor(Math.random() * (max - min + 1));

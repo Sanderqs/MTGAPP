@@ -1,7 +1,9 @@
 import React from "react";
+
+//Import Components
 import CoinFlip from "../component/CoinFlip";
 import Dice from "../component/Dice";
-// import * from '../assets'
+
 
 const Randomize = () => {
   return (

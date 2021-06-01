@@ -1,5 +1,6 @@
 import { combineReducers } from "redux";
 
+//Import Reducers
 import landReducer from "./land";
 import counterReducer from "./counter";
 import devotionReducer from "./devotion";
