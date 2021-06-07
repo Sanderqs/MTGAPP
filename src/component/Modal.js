@@ -18,8 +18,9 @@ import {
 //TODO:
 // 1. Accordion toevoegen met data card.
 // 2. Styling
+// 3. rules werkt nu wel maar moet die [0] oplossen
 
-const Modal = ({ showModal, setShowModal, rulesImage }) => {
+const Modal = ({ showModal, setShowModal, rulesImage, rule, price }) => {
   const modalRef = useRef();
   const animation = useSpring({
     config: {
@@ -55,7 +56,9 @@ const Modal = ({ showModal, setShowModal, rulesImage }) => {
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
   };
+  console.log(rule);
 
+  // const { comment } = rule[0];
   return (
     <>
       {showModal ? (
@@ -74,15 +77,23 @@ const Modal = ({ showModal, setShowModal, rulesImage }) => {
                       aria-controls="panel1d-content"
                       id="panel1d-header"
                     >
-                      <Typography>Info</Typography>
+                      <Typography>Rules</Typography>
                     </AccordionSummary>
                     <AccordionDetails>
                       <Typography>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Suspendisse malesuada lacus ex, sit amet blandit leo
-                        lobortis eget. Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit. Suspendisse malesuada lacus ex, sit
-                        amet blandit leo lobortis eget.
+                        {rule &&
+                          rule.map((r) => (
+                            <div>
+                              <div>
+                                <p>Date: {r.published_at}</p>
+
+                                {r.comment}
+                              </div>
+                              <div>
+                                <br />
+                              </div>
+                            </div>
+                          ))}
                       </Typography>
                     </AccordionDetails>
                   </Accordion>
@@ -95,16 +106,10 @@ const Modal = ({ showModal, setShowModal, rulesImage }) => {
                       aria-controls="panel2d-content"
                       id="panel2d-header"
                     >
-                      <Typography>Rules</Typography>
+                      <Typography>Price</Typography>
                     </AccordionSummary>
                     <AccordionDetails>
-                      <Typography>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Suspendisse malesuada lacus ex, sit amet blandit leo
-                        lobortis eget. Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit. Suspendisse malesuada lacus ex, sit
-                        amet blandit leo lobortis eget.
-                      </Typography>
+                      <Typography>€ {price}</Typography>
                     </AccordionDetails>
                   </Accordion>
                   <Accordion

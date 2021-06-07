@@ -15,7 +15,7 @@ const Dice = () => {
         src={require(`../assets/${"dice" + rollDice6()}.png`).default}
         alt="kees"
       />
-      <StyledRollingDice />
+      <StyledRollingDice onClick={() => console.log("klik")} />
     </div>
   );
 };

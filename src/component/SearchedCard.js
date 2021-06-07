@@ -10,16 +10,9 @@ import { StyledImg, StyledCard } from "./SearchElements";
 // 1.
 // 2.
 
-const SearchedCard = ({
-  image,
-  name,
-  rules,
-  rulesImage,
-  getRulings,
-  price,
-}) => {
+const SearchedCard = ({ image, name, rule, rulesImage, getRulings, price }) => {
   const [showModal, setShowModal] = useState(false);
-
+  console.log(rule);
   const openModal = () => {
     setShowModal((prev) => !prev);
   };
@@ -29,6 +22,8 @@ const SearchedCard = ({
         showModal={showModal}
         setShowModal={setShowModal}
         rulesImage={rulesImage}
+        rule={rule}
+        price={price}
       />
       <StyledCard>
         <StyledImg
@@ -40,24 +35,6 @@ const SearchedCard = ({
           }}
         />
       </StyledCard>
-
-      {/* {rules && (
-        <>
-          <>
-            {rules.map((rule) => (
-              <div key={rule}>
-                <StyledImg src={rulesImage} />
-                <p>Date:</p>
-                {rule.published_at}
-                <p>Rules:</p>
-                {rule.comment}
-                <p>price</p>
-                {price}
-              </div>
-            ))}
-          </>
-        </>
-      )} */}
     </div>
   );
 };

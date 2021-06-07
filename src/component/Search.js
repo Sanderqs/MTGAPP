@@ -68,7 +68,7 @@ const Search = () => {
             image={searchedCard.image_uris.normal}
             rulesImage={searchedCard.image_uris.art_crop}
             price={searchedCard.prices.eur}
-            rules={rulingsCard}
+            rule={rulingsCard}
             getRulings={getRulings}
           />
           {/* <button onClick={() => getRulings()}>Show rulings</button> */}

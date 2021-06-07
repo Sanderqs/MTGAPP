@@ -36,13 +36,17 @@ const Counters = (props) => {
   });
   return (
     <StyledLifeCounterContainer>
-      <StyledMinButton onClick={() => setCount(count - 1)}>-</StyledMinButton>
+      <StyledMinButton className="player1" onClick={() => setCount(count - 1)}>
+        -
+      </StyledMinButton>
 
       <StyledLifeTotal>
         <h1>{count}</h1>
       </StyledLifeTotal>
 
-      <StyledPlusButton onClick={() => setCount(count + 1)}>+</StyledPlusButton>
+      <StyledPlusButton className="player2" onClick={() => setCount(count + 1)}>
+        +
+      </StyledPlusButton>
     </StyledLifeCounterContainer>
   );
 };
