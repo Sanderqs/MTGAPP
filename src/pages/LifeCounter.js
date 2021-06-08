@@ -6,8 +6,8 @@ import Counters from "../component/Counters";
 const LifeCounter = (props) => {
   return (
     <div>
-      <Counters />
-      <Counters />
+      <Counters className="player1" />
+      <Counters className="player2" />
     </div>
   );
 };

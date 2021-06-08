@@ -13,6 +13,9 @@ import { StyledImg, StyledCard } from "./SearchElements";
 const SearchedCard = ({ image, name, rule, rulesImage, getRulings, price }) => {
   const [showModal, setShowModal] = useState(false);
   console.log(rule);
+  const loadDetailHandler = () => {
+    document.body.style.overflow = "hidden";
+  };
   const openModal = () => {
     setShowModal((prev) => !prev);
   };
@@ -32,6 +35,7 @@ const SearchedCard = ({ image, name, rule, rulesImage, getRulings, price }) => {
           onClick={() => {
             getRulings();
             openModal();
+            loadDetailHandler();
           }}
         />
       </StyledCard>

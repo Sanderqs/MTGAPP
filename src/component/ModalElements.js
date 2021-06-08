@@ -10,6 +10,7 @@ import { MdClose } from "react-icons/md";
 
 export const StyledBackground = styled.div`
   width: 100%;
+  overflow-y: scroll;
   height: 100%;
   background: rgba(0, 0, 0, 0.8);
   position: fixed;

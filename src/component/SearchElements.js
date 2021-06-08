@@ -18,6 +18,7 @@ export const StyledH1 = styled.h1`
 `;
 export const StyledCard = styled.div`
   display: flex;
+  overflow-y: scroll;
   align-items: center;
   justify-content: center;
   background: #eef5ee;
