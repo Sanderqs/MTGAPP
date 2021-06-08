@@ -10,9 +10,17 @@ import { StyledImg, StyledCard } from "./SearchElements";
 // 1.
 // 2.
 
-const SearchedCard = ({ image, name, rule, rulesImage, getRulings, price }) => {
+const SearchedCard = ({
+  image,
+  name,
+  rule,
+  rulesImage,
+  getRulings,
+  price,
+  text,
+}) => {
   const [showModal, setShowModal] = useState(false);
-  console.log(rule);
+  console.log(text);
   const loadDetailHandler = () => {
     document.body.style.overflow = "hidden";
   };
@@ -27,6 +35,7 @@ const SearchedCard = ({ image, name, rule, rulesImage, getRulings, price }) => {
         rulesImage={rulesImage}
         rule={rule}
         price={price}
+        text={text}
       />
       <StyledCard>
         <StyledImg

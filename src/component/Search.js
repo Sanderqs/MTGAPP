@@ -68,6 +68,7 @@ const Search = () => {
             image={searchedCard.image_uris.normal}
             rulesImage={searchedCard.image_uris.art_crop}
             price={searchedCard.prices.eur}
+            text={searchedCard.oracle_text}
             rule={rulingsCard}
             getRulings={getRulings}
           />

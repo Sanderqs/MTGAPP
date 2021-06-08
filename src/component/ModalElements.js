@@ -17,6 +17,12 @@ export const StyledBackground = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #130000;
+  }
 `;
 
 export const StyledModalWrapper = styled.div`

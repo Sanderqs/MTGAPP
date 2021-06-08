@@ -20,7 +20,7 @@ import {
 // 2. Styling
 // 3. rules werkt nu wel maar moet die [0] oplossen
 
-const Modal = ({ showModal, setShowModal, rulesImage, rule, price }) => {
+const Modal = ({ showModal, setShowModal, rulesImage, rule, price, text }) => {
   const modalRef = useRef();
   const animation = useSpring({
     config: {
@@ -56,7 +56,7 @@ const Modal = ({ showModal, setShowModal, rulesImage, rule, price }) => {
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
   };
-  console.log(rule);
+  console.log(text);
 
   // const { comment } = rule[0];
   return (
@@ -121,16 +121,10 @@ const Modal = ({ showModal, setShowModal, rulesImage, rule, price }) => {
                       aria-controls="panel3d-content"
                       id="panel3d-header"
                     >
-                      <Typography>Price</Typography>
+                      <Typography>text</Typography>
                     </AccordionSummary>
                     <AccordionDetails>
-                      <Typography>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Suspendisse malesuada lacus ex, sit amet blandit leo
-                        lobortis eget. Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit. Suspendisse malesuada lacus ex, sit
-                        amet blandit leo lobortis eget.
-                      </Typography>
+                      <Typography>{text}</Typography>
                     </AccordionDetails>
                   </Accordion>
                 </div>
